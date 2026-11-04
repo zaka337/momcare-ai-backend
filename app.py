@@ -110,5 +110,7 @@ def predict_risk(patient: PatientData):
             "confidence_scores_percentage": class_probabilities
         }
 
+    except HTTPException:
+        raise  # keep the 400s above as 400s, instead of turning them into 500s
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))

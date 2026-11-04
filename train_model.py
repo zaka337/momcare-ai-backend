@@ -9,7 +9,7 @@ import joblib
 
 # Automatically find the folder where train_model.py lives
 base_dir = os.path.dirname(os.path.abspath(__file__))
-file_name = os.path.join(base_dir, 'dataset.csv')  # Points to dataset.csv
+file_name = os.path.join(base_dir, 'Dataset.csv')  # Points to Dataset.csv (the file's real name: matters on Linux and macOS)
 
 # 1. Load the dataset
 df = pd.read_csv(file_name)
